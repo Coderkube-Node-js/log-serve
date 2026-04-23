@@ -27,7 +27,6 @@ async function fetchMeta() {
   const data = await res.json();
   state.serverName = data.server || "unknown";
   document.getElementById("serverName").textContent = state.serverName;
-  document.getElementById("serverHint").textContent = serverHintText(state.serverName);
   applyFilterMetadata(data.filters || {});
 }
 
@@ -302,10 +301,6 @@ function extractRequestFromRaw(raw) {
   return match ? match[2] : "";
 }
 
-function serverHintText(name) {
-  if (!name || name === "unknown") return "No detected server metadata available";
-  return `Streaming logs for ${name} and showing only filter fields backed by real log data.`;
-}
 
 function escapeHTML(value) {
   return String(value)

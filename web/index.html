@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>server-logger / dashboard</title>
+  <title>log-serve - Web Server Log Monitor</title>
+  <meta name="description" content="Real-time web server log streaming and analysis tool. Monitor Apache, Nginx, and other server logs with live filtering and powerful search.">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <div class="shell">
     <header class="topbar">
       <div class="topbar-copy">
-        <div class="eyebrow">server-logger</div>
-        <h1>dashboard</h1>
+        <div class="eyebrow">log-serve</div>
+        <h1>Dashboard</h1>
         <p class="subtitle">Clear, live visibility into your web server logs.</p>
       </div>
       <div class="topbar-actions">
@@ -29,16 +30,6 @@
         </div>
       </div>
     </header>
-
-    <section class="server-banner">
-      <div class="server-banner-main">
-        <span class="server-label">Detected server</span>
-        <strong id="serverName">Loading...</strong>
-      </div>
-      <div class="server-banner-meta">
-        <span id="serverHint">Waiting for server metadata</span>
-      </div>
-    </section>
 
     <section class="content panel logs-panel">
         <div class="toolbar">
@@ -62,9 +53,12 @@
 
         <section class="filters-panel">
           <div class="filters-head">
-            <div>
+            <div class="filters-title-wrap">
               <h3>Filters</h3>
-              <p>Only fields backed by current log data are shown.</p>
+              <div class="server-chip">
+                <span class="server-chip-label">Server</span>
+                <strong id="serverName">Loading...</strong>
+              </div>
             </div>
             <div class="stats-inline">
               <div class="stat-chip"><span>Total</span><strong id="statTotal">0</strong></div>
