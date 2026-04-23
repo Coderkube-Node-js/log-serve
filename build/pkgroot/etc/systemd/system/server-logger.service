@@ -1,0 +1,11 @@
+[Unit]
+Description=Server Logger
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/server-logger
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+Package: server-logger
+Version: 1.0.0
+Section: admin
+Priority: optional
+Architecture: amd64
+Maintainer: Server Logger Team <ops@example.com>
+Description: Single-binary Linux web server log monitoring dashboard

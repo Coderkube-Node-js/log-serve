@@ -1,0 +1,3 @@
+server-logger usr/local/bin/
+configs/config.yaml etc/server-logger/
+service/server-logger.service etc/systemd/system/

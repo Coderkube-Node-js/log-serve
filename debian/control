@@ -1,0 +1,10 @@
+Source: server-logger
+Section: admin
+Priority: optional
+Maintainer: Server Logger Team <ops@example.com>
+Standards-Version: 4.6.2
+
+Package: server-logger
+Architecture: amd64
+Depends: ${misc:Depends}
+Description: Single-binary Linux web server log monitoring dashboard

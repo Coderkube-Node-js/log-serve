@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+systemctl stop server-logger || true
+systemctl disable server-logger || true

@@ -1,0 +1,30 @@
+port: 8085
+
+database:
+  path: /var/lib/server-logger/logs.db
+
+logs:
+  retention_days: 7
+  max_line_bytes: 1048576
+  poll_interval_seconds: 1
+  batch_size: 500
+  buffer_size: 4096
+  sources: []
+
+security:
+  auth_enabled: false
+  username: admin
+  password: change-me
+  https:
+    enabled: false
+    cert_file: ""
+    key_file: ""
+  rate_limit:
+    requests_per_minute: 240
+    burst: 60
+
+server:
+  host: 0.0.0.0
+
+retention:
+  cleanup_interval_minutes: 60

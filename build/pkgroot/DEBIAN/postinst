@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+mkdir -p /etc/server-logger /var/lib/server-logger /var/log/server-logger
+systemctl daemon-reload || true
+systemctl enable server-logger || true
+systemctl restart server-logger || true
